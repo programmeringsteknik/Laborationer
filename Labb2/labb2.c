@@ -8,11 +8,13 @@
 #include "scoreTable.h"
 void initlizeScoreTable();
 void printFinalScore();
+int playOneTurn();
 main(){
+
 	/*initializeScoreTable();  
 	playYatzy();  
 	printFinalScore();*/
-	rollDice();
+	playOneTurn();
 }
 /*
 for(i=0;i<NUMBEROFROUNDS;i++){  
@@ -20,10 +22,15 @@ for(i=0;i<NUMBEROFROUNDS;i++){
 	printScore();  
 	updateScoreTable(getRow());   
 	printScore(); 
-} 
+} */
 
-
-for(i=0;i<2;i++){  //First two rolls 
-rollDice();  printDice();  keepWhichDice();
+int playOneTurn(){
+	int i;
+	for (i = 0; i < 2; i++){  //First two rolls 
+		rollDice();
+		printDice();
+		keepWhichDice();
+	}
+	rollDice(); //Last roll 
+	printDice();
 }
-rollDice(); //Last roll printDice();*/ 

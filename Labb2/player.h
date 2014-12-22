@@ -5,5 +5,6 @@
 #define DISCARD 0
 #include "genlib.h"
 
-int KeepWhichDice(void);
+int keepWhichDice(void);
+bool keepDie(int index);
 #endif

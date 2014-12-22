@@ -1,5 +1,6 @@
 #include "dice.h"
 #include "random.h"
+#include "player.h"
 static int dice [N_DICE];
 
 void rollDice(void){
@@ -7,6 +8,7 @@ void rollDice(void){
 	Randomize();
 	for(i=0;i<N_DICE;i++){
 	dice[i] = RandomInteger(1,6);
+	if (keepDie == 1) i + 1;
 	}
 	printDice();
 }
